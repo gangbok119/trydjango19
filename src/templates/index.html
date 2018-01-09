@@ -14,7 +14,7 @@
 {{object_list}}<br/>
 
 {% for obj in object_list %}
-{{obj.title}}<br/>
+<a href="{{ obj.get_absolute_url }}">{{obj.title}}</a><br/>
 {{obj.content}}<br/>
 {{obj.timestamp}}<br/>
 {{obj.updated}}<br/>

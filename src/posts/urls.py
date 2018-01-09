@@ -7,7 +7,7 @@ from .views import post_home, post_delete, post_update, post_list, post_detail, 
 urlpatterns = [
     url(r'^$', post_home,),
     url(r'^create/$', post_create,),
-    url(r'^detail/(?P<pk>\d+)/$', post_detail,),
+    url(r'^(?P<pk>\d+)/$', post_detail,name='detail'),
     url(r'^list/$', post_list,),
     url(r'^update/$', post_update,),
     url(r'^delete/$', post_delete,),
