@@ -5,20 +5,18 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Index</title>
+    <title>Detail</title>
 </head>
 <body>
-
 <h1>{{ title }} is working</h1>
 
-{{object_list}}<br/>
 
-{% for obj in object_list %}
-{{obj.title}}<br/>
-{{obj.content}}<br/>
-{{obj.timestamp}}<br/>
-{{obj.updated}}<br/>
-{{obj.pk}}<br/>
-{% endfor %}
+
+{{instance.title}}<br/>
+{{instance.content}}<br/>
+{{instance.timestamp}}<br/>
+{{instance.updated}}<br/>
+{{instance.pk}}<br/>
+
 </body>
 </html>
