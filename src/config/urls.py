@@ -17,11 +17,12 @@ from django.conf.urls import url
 from django.contrib import admin
 from django.urls import include
 from django.urls import path
+from django.urls import re_path
 
-
+import posts
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path(r'^posts/',include("posts.urls",namespace='posts',)),
+    re_path(r'^posts/',include('posts.urls',namespace=None)),
 
 ]
