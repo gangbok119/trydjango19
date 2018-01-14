@@ -18,7 +18,8 @@ from django.contrib import admin
 from django.urls import include
 from django.urls import path
 from django.urls import re_path
-
+from django.conf import settings
+from django.conf.urls.static import static
 import posts
 
 urlpatterns = [
@@ -26,3 +27,6 @@ urlpatterns = [
     re_path(r'^posts/',include('posts.urls',namespace=None)),
 
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

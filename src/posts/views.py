@@ -26,8 +26,7 @@ def post_create(request):
         instance.save()
         messages.success(request,"Successfully Created")
         return HttpResponseRedirect(instance.get_absolute_url())
-    else:
-        messages.error(request, "Not Successfully Created")
+
     context = {
         'form': form,
     }
@@ -60,7 +59,7 @@ def post_list(request):  # List items
         "object_list":queryset,
         "title": "List"
     }
-    return render(request, "base.html", context=context)
+    return render(request, "post_list.html", context=context)
 
 
 def post_update(request,pk=None):
